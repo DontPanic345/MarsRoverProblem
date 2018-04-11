@@ -1,11 +1,7 @@
 {
   "name": "marsroverproblem",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Calculates the end position of mars rover from given grid size, coordinates, and moves.",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {},
   "devDependencies": {
     "mocha": "^5.0.5"
@@ -18,9 +14,5 @@
     "url": "git+https://github.com/DontPanic345/MarsRoverProblem.git"
   },
   "author": "Alan Falloon",
-  "license": "unlicense",
-  "bugs": {
-    "url": "https://github.com/DontPanic345/MarsRoverProblem/issues"
-  },
-  "homepage": "https://github.com/DontPanic345/MarsRoverProblem#readme"
+  "license": "unlicense"
 }
