@@ -6,24 +6,25 @@
 
 The problem is to take a grid size and then list of rover coordinates and moves to make around the grid. Then to calculate the final position of each rover.
 
-## Installation Instructions
-I developed and tested this on Ubuntu.
-My node installation was actually handled by VScode and plugins but using the apt-get method below should work just fine.
+The solution I've built only takes input from the unit tests.
+
+## Installation and Testing Instructions
+To install on a ubuntu use the following
 
 ```
-sudo apt-get install node.js
-cd /your/test/directory
+apt-get update
+apt-get install curl git -qq
+curl -sL https://deb.nodesource.com/setup_8.x | bash -
+apt-get install nodejs -qq
 git clone https://github.com/DontPanic345/MarsRoverProblem.git
 cd MarsRoverProblem
+node --version
+npm --version
 npm install
-```
-
-## Testing
-
-After installing run 
-```
 npm test
 ```
+
+Automated tests are carried out by gitlab.com, you can see the results [here](https://gitlab.com/falloonalan/MarsRoverProblem/pipelines?scope=finished&page=1). Tests are from a fresh ubuntu docker image and also tests against node 9.
 
 ## Full Description
 
