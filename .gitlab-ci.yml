@@ -1,14 +1,15 @@
-build:
-  image: node
-  script:
-    - node --version
-    - npm --version
-    - which node
-    - which npm
-    - npm install
+# build:
+#   image: node
+#   script:
+#     - node --version
+#     - npm --version
+#     - which node
+#     - which npm
+#     - npm install
 
 test:
   image: node
   script:
+    - npm install
     - npm test
 
