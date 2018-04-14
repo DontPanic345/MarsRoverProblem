@@ -10,6 +10,8 @@
 test:
   image: node
   script:
+    - node --version
+    - npm --version
     - npm install
     - npm test
 
