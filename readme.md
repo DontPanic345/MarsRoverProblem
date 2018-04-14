@@ -11,7 +11,7 @@ I developed and tested this on Ubuntu.
 My node installation was actually handled by VScode and plugins but using the apt-get method below should work just fine.
 
 ```
-sudo apt-get install node.js #this will install npm as well
+sudo apt-get install node.js
 cd /your/test/directory
 git clone https://github.com/DontPanic345/MarsRoverProblem.git
 cd MarsRoverProblem
@@ -43,7 +43,7 @@ degrees left or right respectively, without moving from its current spot.
 Assume that the square directly North from (x, y) is (x, y+1).
 
 
-**INPUT:**
+### INPUT:
 
 The first line of input is the upper-right coordinates of the plateau, the
 lower-left coordinates are assumed to be 0,0.
@@ -57,27 +57,24 @@ Each rover will be finished sequentially, which means that the second rover
 won't start to move until the first one has finished moving.
 
 
-**OUTPUT:**
+### OUTPUT:
 
 The output for each rover should be its final co-ordinates and heading.
 
 
 **Test​ Input:**
 
+```
 5 5
-
 1 2 N
-
 LMLMLMLMM
-
 3 3 E
-
 MMRMMRMRRM
-
+```
 
 **Expected Output:**
 
+```
 1 3 N
-
 5 1 E
-
+```
