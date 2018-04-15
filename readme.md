@@ -1,10 +1,11 @@
 # Mars Rover Problem
 
-### *Alan Falloon*
+![build](https://gitlab.com/falloonalan/MarsRoverProblem/badges/master/build.svg)
+
 
 ## Brief
 
-The problem is to take a grid size and then list of rover coordinates and moves to make around the grid. Then to calculate the final position of each rover.
+The problem is to take a grid size, list of rover coordinates and moves to make around the grid. Then problem is to calculate the final position of each rover. 
 
 The solution I've built only takes input from the unit tests.
 
@@ -79,3 +80,7 @@ MMRMMRMRRM
 1 3 N
 5 1 E
 ```
+
+## Notes
+
+I didn't impliment full testing of all possible cases that would cause a failure, so some inputs can cause the program to crash. Typically I only tested for one possble invalid input for each function. Instead I was interested in getting automated testing set up which is something I've been meaning to try out for a long time now. In doing so I was able to brush up on my docker knowlege as well, by setting one of the tests to use an Alipne image I signifcantly reduced the setup and test time of that job, it was easy to test against a different Node version at the same time as well, and because I tested using an Ubuntu image I was able to write bullet proof installation instructions.
