@@ -7,8 +7,6 @@
 
 The problem is to take a grid size, list of rover coordinates and moves to make around the grid. Then problem is to calculate the final position of each rover. 
 
-The solution I've built only takes input from the unit tests.
-
 ## Installation and Testing Instructions
 To install on a ubuntu use the following
 
@@ -25,7 +23,7 @@ npm install
 npm test
 ```
 
-Automated tests are carried out by gitlab.com, you can see the results [here](https://gitlab.com/falloonalan/MarsRoverProblem/pipelines?scope=finished&page=1). Tests are from a fresh ubuntu docker image and also tests against node 9.
+Automated tests are carried out by gitlab.com, you can see the results [here](https://gitlab.com/falloonalan/MarsRoverProblem/pipelines?scope=finished&page=1). Tests are from a Ubuntu docker image and also tests against node 9.
 
 ## Full Description
 
@@ -83,4 +81,10 @@ MMRMMRMRRM
 
 ## Notes
 
-I didn't impliment full testing of all possible cases that would cause a failure, so some inputs can cause the program to crash. Typically I only tested for one possble invalid input for each function. Instead I was interested in getting automated testing set up which is something I've been meaning to try out for a long time now. In doing so I was able to brush up on my docker knowlege as well, by setting one of the tests to use an Alipne image I signifcantly reduced the setup and test time of that job, it was easy to test against a different Node version at the same time as well, and because I tested using an Ubuntu image I was able to write bullet proof installation instructions.
+The solution I've built only takes input from the unit tests.
+
+I didn't impliment full testing of all possible cases that would cause a failure, so some inputs can cause the program to crash. Typically I only tested for one possble invalid input for each function.
+
+Instead I was interested in getting automated testing set up which is something I've been meaning to try out for a long time now. In doing so I was able to brush up on my docker knowlege as well, by setting one of the tests to use an Alipne image I signifcantly reduced the setup and test time of that job, it was easy to test against a different Node version at the same time as well, and because I tested using an Ubuntu image I was able to write bullet proof installation instructions.
+
+I didn't add comments to my code this time, I decided to take the project in a different direction by doing the automated testing which was more interesting and benifical to me.
