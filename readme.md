@@ -5,10 +5,10 @@
 
 ## Brief
 
-The problem is to take a grid size, list of rover coordinates and moves to make around the grid. Then problem is to calculate the final position of each rover. 
+The problem is to take a grid size, list of rover coordinates and moves to make around the grid, then to calculate the final position of each rover. 
 
 ## Installation and Testing Instructions
-To install on a ubuntu use the following
+To install on a ubuntu use the following, but the code should run on any machine with Nodejs and npm installed, just follow the last two lines below,
 
 ```
 apt-get update
@@ -17,8 +17,6 @@ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get install nodejs -qq
 git clone https://github.com/DontPanic345/MarsRoverProblem.git
 cd MarsRoverProblem
-node --version
-npm --version
 npm install
 npm test
 ```
