@@ -19,19 +19,19 @@ function getRoverPosition(roverDescription) {
             x: Number(input[0]),
             y: Number(input[1]),
             dir: input[2]
-        }
-        return [null, rover]
+        };
+        return [null, rover];
     } else {
-        return ['Error: Rover details must have at 3 values', null]
+        return ['Error: Rover details must have at 3 values', null];
     }
 }
 
 function checkOnGrid(grid, rover) {
 
-    minx = Math.min(0, grid[0])
-    maxx = Math.max(0, grid[0])
-    miny = Math.min(0, grid[1])
-    maxy = Math.max(0, grid[1])
+    minx = Math.min(0, grid[0]);
+    maxx = Math.max(0, grid[0]);
+    miny = Math.min(0, grid[1]);
+    maxy = Math.max(0, grid[1]);
 
     if (rover.x < minx || maxx < rover.x) {
         return [null, false];
@@ -50,7 +50,7 @@ function doRoverMoves(grid, rover, moves) {
     }
 
     for (let index = 0; index < moves.length; index++) {
-        const move = moves[index];
+        let move = moves[index];
 
         switch (move) {
             case 'L':
@@ -68,7 +68,7 @@ function doRoverMoves(grid, rover, moves) {
                         rover.dir = 'S';
                         break;
                     default:
-                        return ['Error: Rover has invalid direction', null]
+                        return ['Error: Rover has invalid direction', null];
                         break;
                 }
                 break;
@@ -87,7 +87,7 @@ function doRoverMoves(grid, rover, moves) {
                         rover.dir = 'N';
                         break;
                     default:
-                        return ['Error: Rover has invalid direction', null]
+                        return ['Error: Rover has invalid direction', null];
                         break;
                 }
                 break;
@@ -106,7 +106,7 @@ function doRoverMoves(grid, rover, moves) {
                         rover.x--;
                         break;
                     default:
-                        return ['Error: Rover has invalid direction', null]
+                        return ['Error: Rover has invalid direction', null];
                         break;
                 }
 
@@ -114,12 +114,12 @@ function doRoverMoves(grid, rover, moves) {
                 if (err) {
                     return [err, null];
                 } else if (!onGrid) {
-                    return ['Error: Rover has crashed off the plateau!', null]
+                    return ['Error: Rover has crashed off the plateau!', null];
                 }
 
                 break;
             default:
-                return ['Error: Rover has an invalid move', null]
+                return ['Error: Rover has an invalid move', null];
                 break;
         }
     }
@@ -133,7 +133,7 @@ function readInput(input) {
     let [err, size] = parseGrid(lines[0]);
     if (err) {
         console.log(err);
-        return -1
+        return -1;
     }
 
     for (let index = 1; index < lines.length - 1; index += 2) {
@@ -143,7 +143,7 @@ function readInput(input) {
         let [err, rover] = getRoverPosition(roverDescription);
         if (err) {
             console.log(err);
-            return -1
+            return -1;
         }
         [err, rover] = doRoverMoves(size, rover, roverMoves)
         if (err) {
@@ -158,8 +158,8 @@ function readInput(input) {
     return output.trim();
 }
 
-exports.readInput = readInput
-exports.parseGrid = parseGrid
-exports.getRoverPosition = getRoverPosition
-exports.doRoverMoves = doRoverMoves
-exports.checkOnGrid = checkOnGrid
+exports.readInput = readInput;
+exports.parseGrid = parseGrid;
+exports.getRoverPosition = getRoverPosition;
+exports.doRoverMoves = doRoverMoves;
+exports.checkOnGrid = checkOnGrid;

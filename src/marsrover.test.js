@@ -17,7 +17,7 @@ describe('Mars Rover Challenge', function () {
   describe('Parse rover details', function () {
     it('should correctly parse rover details', function () {
       let [err, rover] = mars.getRoverPosition('1 2 N');
-      assert.deepEqual(rover, { x: 1, y: 2, dir: 'N' })
+      assert.deepEqual(rover, { x: 1, y: 2, dir: 'N' });
     })
   })
 
@@ -43,12 +43,12 @@ describe('Mars Rover Challenge', function () {
 
     describe('Test if the rover is on the grid', function () {
       it('should check if the rover is off the grid', function () {
-        let [err, offGrid] = mars.checkOnGrid([5, 5], {x: 6, y: 2});
+        let [err, offGrid] = mars.checkOnGrid([5, 5], { x: 6, y: 2 });
         assert.equal(offGrid, false);
       })
-  
+
       it('should check if the rover is on the grid', function () {
-        let [err, offGrid] = mars.checkOnGrid([5, 5], {x: 5, y: 5});
+        let [err, offGrid] = mars.checkOnGrid([5, 5], { x: 5, y: 5 });
         assert.equal(offGrid, true);
       })
     })
@@ -59,14 +59,14 @@ describe('Mars Rover Challenge', function () {
 1 2 N
 LMLMLMLMM
 3 3 E
-MMRMMRMRRM`
-    
+MMRMMRMRRM`;
+
     const testoutput1 = `1 3 N
-5 1 E`
+5 1 E`;
 
     const crashinput = `5 5
 1 2 N
-MMMMM`
+MMMMM`;
 
     it(`should pass the example test`, function () {
       assert.equal(mars.readInput(testinput1), testoutput1);
@@ -84,18 +84,17 @@ LMLMLMLMM`;
     })
 
     it('should fail with invalid rover direction', function () {
-      const invalidDirection =`5 5
+      const invalidDirection = `5 5
 1 2 NE
-LMLMXXX`
+LMLMXXX`;
       assert.equal(mars.readInput(invalidDirection), -1);
     })
 
     it('should fail with invalid rover moves', function () {
-      const invalidMove =`5 5
+      const invalidMove = `5 5
 1 2 N
-LMLMXXX`
+LMLMXXX`;
       assert.equal(mars.readInput(invalidMove), -1);
     })
-
   });
 });
